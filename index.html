@@ -1,52 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday ❤️</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Sabina ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div id="loading">
-    <div class="heart-loader">❤</div>
-</div>
+    <!-- ================= Loading Screen ================= -->
 
-<div id="welcome" class="hidden">
-    <div class="card">
-        <h1>Ready for your surprise? 💖</h1>
+    <div id="loading-screen">
 
-        <button id="startBtn">Open Surprise</button>
-    </div>
-</div>
-
-<div id="scene" class="hidden">
-
-    <div id="tree">
-        <div id="trunk"></div>
-        <canvas id="branches"></canvas>
-
-        <div id="heartContainer"></div>
-    </div>
-
-    <div id="wishBox">
-        <h1>Hey Love ❤️</h1>
-
-        <p id="typing"></p>
-
-        <div class="gallery">
-            <img src="/image.png">
-            <img src="/photo_2026-06-29_19-20-39.jpg">
-            <img src="/wef.jpg">
+        <div class="loader-heart">
+            ❤️
         </div>
 
-        <h2>I Love You Forever ❤️</h2>
+        <h2>Preparing Your Surprise...</h2>
+
     </div>
 
-</div>
 
-<script src="script.js"></script>
+    <!-- ================= Welcome Screen ================= -->
+
+    <section id="welcome-screen" class="hidden">
+
+        <div class="welcome-card">
+
+            <h1>Happy Birthday Sabina ❤️</h1>
+
+            <p>
+                I made something special just for you...
+            </p>
+
+            <button id="startBtn">
+                Open My Heart 💖
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= Main Scene ================= -->
+
+    <section id="main-scene" class="hidden">
+
+
+        <!-- Night Background -->
+
+        <div id="sky">
+
+            <div id="moon"></div>
+
+            <div id="stars"></div>
+
+            <div id="clouds"></div>
+
+        </div>
+
+
+
+        <!-- Canvas Tree -->
+
+        <canvas id="treeCanvas"></canvas>
+
+
+
+        <!-- Floating Hearts -->
+
+        <div id="heart-container"></div>
+
+
+        <!-- Fireflies -->
+
+        <div id="firefly-container"></div>
+
+
+        <!-- Falling Petals -->
+
+        <div id="petal-container"></div>
+
+
+
+        <!-- Wishes -->
+
+        <div id="wish-box">
+
+            <h1>Happy Birthday My Love ❤️</h1>
+
+            <div id="typing"></div>
+
+        </div>
+
+
+
+        <!-- Hanging Photos -->
+
+        <div id="photo-tree">
+
+            <div class="photo photo1">
+
+                <div class="rope"></div>
+
+                <img src="image.png" alt="Photo 1">
+
+            </div>
+
+
+            <div class="photo photo2">
+
+                <div class="rope"></div>
+
+                <img src="photo_2026-06-29_19-20-39.jpg" alt="Photo 2">
+
+            </div>
+
+
+            <div class="photo photo3">
+
+                <div class="rope"></div>
+
+                <img src="wef.jpg" alt="Photo 3">
+
+            </div>
+
+        </div>
+
+
+
+
+        <!-- Love Quotes -->
+
+        <div id="quote-box">
+
+            <p id="quote-text"></p>
+
+        </div>
+
+
+
+
+        <!-- Final Message -->
+
+        <div id="final-message">
+
+            <h1>❤️ I Love You Forever ❤️</h1>
+
+            <p>
+                Thank you for making my life beautiful.
+            </p>
+
+        </div>
+
+
+
+        <!-- Music Button -->
+
+        <button id="musicBtn">
+
+            🎵 Music
+
+        </button>
+
+
+        <audio id="bgMusic" loop>
+
+            <source src="/Ah Canım Sevgilim (Demo) - Rei 6.mp3" type="audio/mp3">
+
+        </audio>
+
+
+    </section>
+
+
+
+
+
+
+    <!-- ================= Scripts ================= -->
+
+    <script src="tree.js"></script>
+
+    <script src="particles.js"></script>
+
+    <script src="main.js"></script>
 
 </body>
+
 </html>
